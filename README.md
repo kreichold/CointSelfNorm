@@ -1,4 +1,5 @@
 # CointSelfNorm
+Self-Normalized Inference in Cointegrating Regressions
 
 ## Introduction
 This repository contains MATLAB code to test general linear restrictions on `beta` in cointegrating regressions of the form `y = X*beta + u` using the self-normalized test statistic proposed in Reichold and Jentsch (2020), where `y` is a T-dimensional time series, `X` is a (T,m)-dimensional matrix of stochastic regressors and `u` is a T-dimensional vector of stationary error terms. Each column of `X` corresponds to one integrated reressor. The code allows to include a constant or a constant and polynomial time trends as (deterministic) regressors on the right-hand side (`y = D*gamma + X*beta + u`). <!-- However, the code does not allow to test restrictions on the coefficients corresponding to the deterministic regressors (yet). -->
