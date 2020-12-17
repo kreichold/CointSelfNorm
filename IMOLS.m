@@ -1,5 +1,7 @@
 function [estlarge,Z,V,eta] = IMOLS(y,D,X)
-% IM-OLS estimation, ie, OLS estimation in augmented partial sum regression
+% IM-OLS estimation (Vogelsang and Wagner, 2014, Journal of Econometrics)
+% (ie, OLS estimation in augmented partial sum regression)
+% and self-normalizer as in Reichold and Jentsch (2020).
 %-----------------------------------------------------------------------
 % INPUTS     y...               Tx1 dependent variable
 %            D...               either empty array or Txd matrix of deterministic regressors
