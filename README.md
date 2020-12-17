@@ -186,3 +186,9 @@ We obtain the following outputs:
   + `1` if there is enough evidence in the data to reject the null hypothesis
 
 We conclude that there is overwhelming evidence in the data that at least one of the two coefficients corresponding to the stochastic regressors is significantly different from zero at 0.05 level (remeber, both coefficents are in fact equal to one).
+
+## References
+
++ Kilian, L. Lütkepohl, H. (2017). Structural Vector Autoregressive Analysis. Cambridge University Press, Cambridge.
++ Reichold, K., Jentsch, C. (2020). Accurate and (Almost) Tuning Parameter Free Inference in Cointegrating Regressions. Mimeo.
++ Vogelsang, T.J., Wagner, M. (2014). Integrated Modified OLS Estimation and Fixed-b Inference for Cointegrating Regressions. *Journal of Econometrics* **178**, 741-760.
