@@ -1,3 +1,7 @@
+%------------------------------------------------------------------------
+% Karsten Reichold, December 2020
+%------------------------------------------------------------------------
+
 % Works with MATLAB Version R2019b or higher.
 
 clear;
@@ -23,5 +27,5 @@ qmax = floor(T^(1/3));
 
 % call inference.m
 tic;
-[est,testval,critval,testdec] = inference(y,X,deterreg,p,R,r,alpha,boot,B,q,IC,qmin,qmax)
+[est,testval,critval,testdec] = inference(y,X,deterreg,p,R,r,alpha,boot,B,q,IC,qmin,qmax) %#ok<NOPTS>
 toc;

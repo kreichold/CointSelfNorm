@@ -2,7 +2,6 @@ function [est,testval,critval,testdec] = inference(y,X,deterreg,p,R,r,alpha,boot
 %INFERENCE Summary of this function goes here
 %   - allows for no deterministic regressors, constant only and constant and polynomial time trends
 %   - only coefficients corresponding to stochastic regressors are restricted under the null hypothesis
-%   - we do not need AT and invAT here and in IM-OLS function, since matrices scale out when computing test statistic
 %
 %   INPUTS:
 %    y...          Tx1 dependent variable
@@ -26,7 +25,7 @@ function [est,testval,critval,testdec] = inference(y,X,deterreg,p,R,r,alpha,boot
 %    testdec...    1x1 test decision, either 0 (do not reject null) or 1 (reject null)
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Karsten Reichold, December 2, 2020
+% Karsten Reichold, December 2020
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Deterministic regressors and scaling matrix:
 
@@ -90,7 +89,7 @@ if strcmp(boot,'false') % generate asymptotically valid critical value
             
             if strcmp(deterreg,'true')
                 deter = (((1:N)').^(0:p))';
-                g = [diag(N^(-1)*(N.^(-(0:p))))*cumsum(deter,2);(1/N)*cumsum(Wv,2);Wv];
+                g = [diag(N^(-1)*(N.^(-(0:p))))*cumsum(deter,2);(1/N)*cumsum(Wv,2);Wv]; %#ok<UDIM>
             else 
                 g = [(1/N)*cumsum(Wv,2);Wv];
             end
@@ -146,7 +145,7 @@ else % generate bootstrap critical value
         
         % Draw from the centered residuals:
             idx = idx_matrix(b,:);
-            eps_star = eps_hat(:,idx); %(m+1)x(T+k)
+            eps_star = eps_hat(:,idx); %#ok<PFBNS> %(m+1)x(T+k)
        
         % Generate bootstrap quantities w_t^*:
                 % note: recall that we generate T+k values to take burn-in period into account
@@ -168,7 +167,8 @@ else % generate bootstrap critical value
         
         % Generate data UNDER THE NULL:
             % Compute the restricted IM-OLS estimator:
-            estlarge_restr = estlarge - inv(Z'*Z)*R2'*inv(R2*inv(Z'*Z)*R2')*(R2*estlarge - r);
+            estlarge_restr = estlarge - (((Z'*Z)\R2')/((R2/(Z'*Z))*R2'))*(R2*estlarge - r);
+                %estlarge_restr = estlarge - inv(Z'*Z)*R2'*inv(R2*inv(Z'*Z)*R2')*(R2*estlarge - r);
             est_restr = estlarge_restr(1:(d+m),1);
             % Generate data under the null:
             y_star_H0 = [D,X_star]*est_restr + u_star;

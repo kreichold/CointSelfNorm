@@ -6,9 +6,9 @@ function [eps_hat,Phi_hat_YW] = YuleWalker(w,q)
 %-----------------------------------------------------------------------
 %OUTPUTS:   eps_hat...      kx(T-q) centered VAR Sieve residuals
 %           Phi_hat_YW...   kx(kq) matrix containing the q (kxk)-dim. VAR Sieve coefficient matrices
-%-----------------------------------------------------------------------
-% KR, April 2020
-%-----------------------------------------------------------------------
+%------------------------------------------------------------------------
+% Karsten Reichold, December 2020
+%------------------------------------------------------------------------
 %% Yule-Walker estimation in the regression of w_t on w_{t-1},...,w_{t-q}, t=q+1,...,T
 
 % dimensions:

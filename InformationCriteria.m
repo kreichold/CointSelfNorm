@@ -7,9 +7,8 @@ function [qopt] = InformationCriteria(w,qmin,qmax,type)
 %-----------------------------------------------------------------------
 % OUTPUTS:   qopt...           integer, optimal lag length
 %------------------------------------------------------------------------
-% KR, May 2020
+% Karsten Reichold, December 2020
 %------------------------------------------------------------------------
-
 %%
 % dimensions:
 [k,T] = size(w);

@@ -1,6 +1,17 @@
 function [estlarge,Z,V,eta] = IMOLS(y,D,X)
-%UNTITLED3 Summary of this function goes here
-%   Detailed explanation goes here
+% IM-OLS estimation, ie, OLS estimation in augmented partial sum regression
+%-----------------------------------------------------------------------
+% INPUTS     y...               Tx1 dependent variable
+%            D...               either empty array or Txd matrix of deterministic regressors
+%            X...               Txm matrix of stochastic regressors
+%-----------------------------------------------------------------------
+% OUTPUTS:   estlarge...        (2m+d)x1 OLS estimated in augmented partial sum regression
+%            Z...               Tx(2m+d) regressor matrix in augmented and partial sum regression
+%            V...               (2m+d)x(2m+d) VCV estimator of estlarge up to \Omega_{u\cdot v} and scaling
+%            eta...             1x1 self-normalizer
+%------------------------------------------------------------------------
+% Karsten Reichold, December 2020
+%------------------------------------------------------------------------
 
     % Dimensions
     [T,m] = size(X);

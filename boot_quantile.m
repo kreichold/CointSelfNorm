@@ -4,9 +4,9 @@ function [qboot] = boot_quantile(x,alpha)
 % INPUTS     x...           Bx1 vector of bootstrap realizations
 %            alpha...       1xn vector of "nominal sizes"
 %-----------------------------------------------------------------------
-%OUTPUTS:    qboot...       1xn floor((B+1)(1-alpha))-th largest element of x
+% OUTPUTS:    qboot...       1xn floor((B+1)(1-alpha))-th largest element of x
 %------------------------------------------------------------------------
-% KR, November 2020
+% Karsten Reichold, December 2020
 %------------------------------------------------------------------------
 B = size(x,1);
 temp = sort(x,'ascend');
