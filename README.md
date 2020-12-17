@@ -2,7 +2,7 @@
 Self-Normalized Inference in Cointegrating Regressions
 
 ## Introduction
-This repository contains MATLAB code to test general linear restrictions on `beta` in cointegrating regressions of the form `y = X*beta + u` using the self-normalized test statistic proposed in Reichold and Jentsch (2020), where `y` is a T-dimensional time series, `X` is a (T,m)-dimensional matrix of stochastic regressors and `u` is a T-dimensional vector of stationary error terms. Each column of `X` corresponds to one integrated reressor. The code allows to include a constant or a constant and polynomial time trends as (deterministic) regressors on the right-hand side (`y = D*gamma + X*beta + u`). <!-- However, the code does not allow to test restrictions on the coefficients corresponding to the deterministic regressors (yet). -->
+This repository contains MATLAB code to test general linear restrictions on `beta` in cointegrating regressions of the form `y = X*beta + u` using the self-normalized test statistic proposed in Reichold and Jentsch (2020), where `y` is a T-dimensional time series, `X` is a (T,m)-dimensional matrix of stochastic regressors and `u` is a T-dimensional vector of stationary error terms. Each column of `X` corresponds to one integrated regressor. The code allows to include a constant or a constant and polynomial time trends as (deterministic) regressors on the right-hand side (`y = D*gamma + X*beta + u`). <!-- However, the code does not allow to test restrictions on the coefficients corresponding to the deterministic regressors (yet). -->
 
 The test decision can be based on either simulated asymptotically valid critical values or bootstrap critical values. In small to medium samples, the use of bootstrap critical values is recommended. To obtain bootstrap critical values, the procedure fits a finite order VAR to the resdiuals in the cointegrating regression and the first differences of the integrated regressors, as described in detail in Reichold and Jentsch (2020). The order of the VAR can be either specified in advance by the researcher or determined by information criteria (AIC or BIC) as described in Kilian and Lütkepohl (2017).
 
@@ -12,7 +12,7 @@ Download the files and move them into your current working directory, `pwd`.
 ## Main Functions
 
 ### inference.m
-This is the only function the research has to call manually. It tests general linear restrictions (specified by the researcher) on the coefficients corresponding to the stochastic regressors using the self-normalized test statistic. The test decision is based on either simulated asymptotically valid critical values or bootstrap critical values. The function always calls the following function:
+This is the only function the researcher has to call manually. It tests general linear restrictions (specified by the researcher) on the coefficients corresponding to the stochastic regressors using the self-normalized test statistic. The test decision is based on either simulated asymptotically valid critical values or bootstrap critical values. The function always calls the following function:
 
 + **IMOLS.m**
 This function estimates the coefficients corresponding to the stochastic regressors (and, if included, also to the deterministic regressors) using the IM-OLS estimator of Vogelsang and Wagner (2014). The function also computes the self-normalizer.
@@ -185,7 +185,7 @@ We obtain the following outputs:
   + `0` if there is not enough evidence in the data to reject the null hypothesis
   + `1` if there is enough evidence in the data to reject the null hypothesis
 
-We conclude that there is overwhelming evidence in the data that at least one of the two coefficients corresponding to the stochastic regressors is significantly different from zero at 0.05 level (remeber, both coefficents are in fact equal to one).
+We conclude that there is overwhelming evidence in the data that at least one of the two coefficients corresponding to the stochastic regressors is significantly different from zero at 0.05 level (remember, both coefficents are in fact equal to one).
 
 ## References
 
