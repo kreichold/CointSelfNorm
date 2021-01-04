@@ -190,5 +190,5 @@ We conclude that there is overwhelming evidence in the data that at least one of
 ## References
 
 + Kilian, L. Lütkepohl, H. (2017). Structural Vector Autoregressive Analysis. Cambridge University Press, Cambridge.
-+ Reichold, K., Jentsch, C. (2020). Accurate and (Almost) Tuning Parameter Free Inference in Cointegrating Regressions. *SFB 823 Discussion Paper*, TU Dortmund University.
++ Reichold, K., Jentsch, C. (2020). [Accurate and (Almost) Tuning Parameter Free Inference in Cointegrating Regressions](http://dx.doi.org/10.17877/DE290R-21854). *SFB 823 Discussion Paper*, TU Dortmund University.
 + Vogelsang, T.J., Wagner, M. (2014). Integrated Modified OLS Estimation and Fixed-b Inference for Cointegrating Regressions. *Journal of Econometrics* **178**, 741-760.
