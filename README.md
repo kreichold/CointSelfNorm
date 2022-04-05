@@ -2,9 +2,9 @@
 Self-Normalized Inference in Cointegrating Regressions
 
 ## Introduction
-This repository contains MATLAB code to test general linear restrictions on `beta` in cointegrating regressions of the form `y = X*beta + u` using the self-normalized test statistic proposed in Reichold and Jentsch (2020), where `y` is a T-dimensional time series, `X` is a (T,m)-dimensional matrix of stochastic regressors and `u` is a T-dimensional vector of stationary error terms. Each column of `X` corresponds to one integrated regressor. The code allows to include a constant or a constant and polynomial time trends as (deterministic) regressors on the right-hand side (`y = D*gamma + X*beta + u`). <!-- However, the code does not allow to test restrictions on the coefficients corresponding to the deterministic regressors (yet). -->
+This repository contains MATLAB code to test general linear restrictions on `beta` in cointegrating regressions of the form `y = X*beta + u` using the self-normalized test statistic proposed in Reichold and Jentsch (2022), where `y` is a T-dimensional time series, `X` is a (T,m)-dimensional matrix of stochastic regressors and `u` is a T-dimensional vector of stationary error terms. Each column of `X` corresponds to one integrated regressor. The code allows to include a constant or a constant and polynomial time trends as (deterministic) regressors on the right-hand side (`y = D*gamma + X*beta + u`). <!-- However, the code does not allow to test restrictions on the coefficients corresponding to the deterministic regressors (yet). -->
 
-The test decision can be based on either simulated asymptotically valid critical values or bootstrap critical values. In small to medium samples, the use of bootstrap critical values is recommended. To obtain bootstrap critical values, the procedure fits a finite order VAR to the resdiuals in the cointegrating regression and the first differences of the integrated regressors, as described in detail in Reichold and Jentsch (2020). The order of the VAR can be either specified in advance by the researcher or determined by information criteria (AIC or BIC) as described in Kilian and Lütkepohl (2017).
+The test decision can be based on either simulated asymptotically valid critical values or bootstrap critical values. In small to medium samples, the use of bootstrap critical values is recommended. To obtain bootstrap critical values, the procedure fits a finite order VAR to the resdiuals in the cointegrating regression and the first differences of the integrated regressors, as described in detail in Reichold and Jentsch (2022). The order of the VAR can be either specified in advance by the researcher or determined by information criteria (AIC or BIC) as described in Kilian and Lütkepohl (2017).
 
 ## Usage
 Download the files and move them into your current working directory, `pwd`.
@@ -34,7 +34,7 @@ Given a number of bootstrap realizations of the self-normalized test statistic, 
 This auxiliary function stacks the columns of a matrix.
 
 ## Illustration
-To illustrate the procedure, we have generate data, `y`and `X` (available as MAT-files above), as described in Reichold and Jentsch (2020), with `beta=[1,1]'`, `rho1=rho2=0.6` and `T=100`. We now show how to use the `inference.m` function to test restrictions on `beta` using the self-normalized test. The illustration is also available as a MATLAB-Script in **illustration.m**.
+To illustrate the procedure, we have generate data, `y`and `X` (available as MAT-files above), as described in Reichold and Jentsch (2022), with `beta=[1,1]'`, `rho1=rho2=0.6` and `T=100`. We now show how to use the `inference.m` function to test restrictions on `beta` using the self-normalized test. The illustration is also available as a MATLAB-Script in **illustration.m**.
 
 <!--
 
@@ -190,5 +190,5 @@ We conclude that there is overwhelming evidence in the data that at least one of
 ## References
 
 + Kilian, L. Lütkepohl, H. (2017). Structural Vector Autoregressive Analysis. Cambridge University Press, Cambridge.
-+ Reichold, K., Jentsch, C. (2020). [Accurate and (Almost) Tuning Parameter Free Inference in Cointegrating Regressions](http://dx.doi.org/10.17877/DE290R-21854). *SFB 823 Discussion Paper*, TU Dortmund University.
++ Reichold, K., Jentsch, C. (2022). [A Bootstrap-Assisted Self-Normalization Approach to Inference in Cointegrating Regressions](https://doi.org/10.48550/arXiv.2204.01373). arXiv e-print 2204.01373.
 + Vogelsang, T.J., Wagner, M. (2014). Integrated Modified OLS Estimation and Fixed-b Inference for Cointegrating Regressions. *Journal of Econometrics* **178**, 741-760.
