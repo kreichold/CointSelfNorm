@@ -11,7 +11,7 @@ Download the files and move them into your current working directory, `pwd`.
 
 ## Main Function
 
-### Self_Normalized_Bootstrap_Inference.m
++ **Self_Normalized_Bootstrap_Inference.m**
 This is the only function that needs to be executed by the practitioner. It returns IM-OLS estimation results, realizations of self-normalized test statistics, and corresponding VAR sieve bootstrap critical values. 
 
 ## Auxiliary Functions
