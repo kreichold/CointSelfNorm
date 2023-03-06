@@ -16,20 +16,20 @@ This is the only function that needs to be executed by the practitioner. It retu
 
 ## Auxiliary Functions
 
-### IC_VAR.m
++ **IC_VAR.m**
 This function determines the optimal order of the VAR using either AIC or the BIC.
 
-### YuleWalker.m
++ **YuleWalker.m**
 This function uses the Yule-Walker estimator to fit a finite order VAR.
 
-### boot_quantile.m
++ **boot_quantile.m**
 Given a number of bootstrap realizations of a test statistic, this function returns the corresponding bootstrap critical value.
 
-### vec.m
++ **vec.m**
 This function stacks the columns of a matrix.
 
 ## Illustration
-The script `example.m` provides a brief illustration.
+The script **example.m** provides a brief illustration.
 
 ## Reference
 + Reichold, K., Jentsch, C. (2022). [A Bootstrap-Assisted Self-Normalization Approach to Inference in Cointegrating Regressions](https://doi.org/10.48550/arXiv.2204.01373). arXiv e-print 2204.01373.
