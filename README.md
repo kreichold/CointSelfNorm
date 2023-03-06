@@ -32,4 +32,4 @@ This function stacks the columns of a matrix.
 The script **example.m** provides a brief illustration on how to use the function **Self_Normalized_Bootstrap_Inference.m** in applications.
 
 ## Reference
-+ Reichold, K., Jentsch, C. (2022). [A Bootstrap-Assisted Self-Normalization Approach to Inference in Cointegrating Regressions](https://doi.org/10.48550/arXiv.2204.01373). arXiv e-print 2204.01373.
+Reichold, K., Jentsch, C. (2022). [A Bootstrap-Assisted Self-Normalization Approach to Inference in Cointegrating Regressions](https://doi.org/10.48550/arXiv.2204.01373). arXiv e-print 2204.01373.
