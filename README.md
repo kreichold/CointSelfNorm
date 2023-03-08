@@ -4,7 +4,9 @@ Self-Normalized Bootstrap Inference in Cointegrating Regressions
 ## Introduction
 This repository contains MATLAB code to test general linear restrictions on `beta` in cointegrating regressions of the form `y = D*delta + X*beta + u` using the self-normalized test statistics proposed in Reichold and Jentsch (2022). Here, `y` is a T-dimensional time series, `D` is a (T,d)-dimensional matrix of deterministic components, `X` is a (T,m)-dimensional matrix of integrated regressors, and `u` is a T-dimensional stationary error term.
 
-To obtain VAR sieve bootstrap critical values, the procedure fits a finite order VAR to the regression resdiuals (obtained with the IM-OLS estimator) and the first differences of the integrated regressors. The order of the VAR is determined by information criteria (either AIC or BIC). For all details, please see Reichold and Jentsch (2022). 
+To obtain VAR sieve bootstrap critical values, the procedure fits a finite order VAR to the regression resdiuals (obtained with the IM-OLS estimator) and the first differences of the integrated regressors. The order of the VAR is determined by information criteria (either AIC or BIC). For all details, please see Reichold and Jentsch (2022).
+
+The VAR sieve bootstrap scheme may be of independent interest and can be extracted easily from the function **Self_Normalized_Bootstrap_Inference.m**.
 
 ## Usage
 Download the files and move them into your current working directory, `pwd`.
