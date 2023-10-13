@@ -34,4 +34,4 @@ This function stacks the columns of a matrix.
 The script **example.m** provides a brief illustration on how to use the function **Self_Normalized_Bootstrap_Inference.m** in applications.
 
 ## Reference
-Reichold, K., Jentsch, C. (2023). [Bootstrap Inference in Cointegrating Regressions: Traditional and Self-Normalized Test Statistics]. Accepted at Journal of Business & Economic Statistics.
+Reichold, K., Jentsch, C. (2023). Bootstrap Inference in Cointegrating Regressions: Traditional and Self-Normalized Test Statistics. Accepted at **Journal of Business & Economic Statistics**.
